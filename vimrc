@@ -38,7 +38,7 @@ set number
 
 " Show status line
 set laststatus=2
-set statusline=%t%<\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}\ %=[%3l,%3v\ %L(%P%M)]
+set statusline=%t%<\ %r%h%w\ %y\ %{fugitive#statusline()}\ %=[%3l,%3v\ %L(%P%M)]
 
 " Hide right hand scroll bar
 set guioptions-=r
