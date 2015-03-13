@@ -64,6 +64,9 @@ set cindent
 " make backspace work like most other apps
 set backspace=2
 
+" enable mouse scroll in terminal vim
+set mouse=a
+
 " Delete trailing whitespaces on save
 autocmd BufWritePre * :%s/\s\+$//e
 
