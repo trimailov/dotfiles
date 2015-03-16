@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/justas/web/labtarna_m/labtarna'
+let g:netrw_dirhist_2='/Users/justas/web/labtarna_m/labtarna/src'
+let g:netrw_dirhist_3='/Users/justas/web/labtarna_m/labtarna/src/labtarna'
+let g:netrw_dirhist_4='/Users/justas/web/labtarna_m/labtarna/src/labtarna/views'
+let g:netrw_dirhist_5='/Users/justas/web/labtarna_m/labtarna'
+let g:netrw_dirhist_6='/Users/justas/web/labtarna_m/labtarna/src/labtarna/tests'
+let g:netrw_dirhist_7='/Users/justas/web/labtarna_m/labtarna/src/labtarna/tests/contracts'
