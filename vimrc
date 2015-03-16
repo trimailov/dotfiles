@@ -86,6 +86,9 @@ set splitright
 " do not save swap files
 set noswapfile
 
+" copy to OS clipboard
+set clipboard=unnamed
+
 " turn on syntax highlighting
 syntax on
 
