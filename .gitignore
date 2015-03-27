@@ -1,2 +1,5 @@
 vim/bundle/*
 vim/.netrw*
+
+nvim/bundle/*
+nvim/.netrw*
