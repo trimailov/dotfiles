@@ -86,6 +86,12 @@ set splitright
 " do not save swap files
 set noswapfile
 
+" detect file changes
+set autoread
+
+" show search result while writing search query
+set incsearch
+
 " turn on syntax highlighting
 syntax on
 

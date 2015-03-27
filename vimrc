@@ -137,5 +137,5 @@ autocmd BufNewFile,BufRead *.s   set syntax=arm
 " ==== COLORS ====
 let g:molokai_original = 1
 
-colors molokai
+colorscheme molokai
 " ====================
