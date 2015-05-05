@@ -145,10 +145,10 @@ inoremap <Tab> <C-P>
 inoremap <C-P> <C-[>
 
 " Better moving between splits
-nnoremap <C-h> <C-W>h
-nnoremap <C-j> <C-W>j
-nnoremap <C-k> <C-W>k
-nnoremap <C-l> <C-W>l
+nnoremap <m-h> <C-W>h
+nnoremap <m-j> <C-W>j
+nnoremap <m-k> <C-W>k
+nnoremap <m-l> <C-W>l
 
 " No need of shift for :
 nnoremap ; :
