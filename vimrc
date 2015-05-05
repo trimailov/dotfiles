@@ -133,7 +133,7 @@ syntax on
 let mapleader = ","
 
 " map Explore to a shortcut
-nnoremap <leader>n :Explore<cr>
+nnoremap <leader>n :NERDTreeToggle<cr>
 " show Explore as a tree
 let g:netrw_liststyle=3
 " Do not show .pyc files in Explore
