@@ -1,5 +1,7 @@
 vim/bundle/*
+vim/spell/*
 vim/.netrw*
 
 nvim/bundle/*
+nvim/spell/*
 nvim/.netrw*
