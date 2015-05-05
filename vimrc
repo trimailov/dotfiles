@@ -21,6 +21,19 @@ Plugin 'zah/nimrod.vim'
 Plugin 'scrooloose/nerdtree'
 let NERDTreeIgnore = ['\.pyc$']
 
+" add neomake
+Plugin 'benekastah/neomake'
+let g:neomake_error_sign = {
+            \ 'text': '>>',
+            \ 'texthl': 'ErrorMsg',
+            \ }
+hi MyWarningMsg ctermbg=3 ctermfg=0
+let g:neomake_warning_sign = {
+            \ 'text': '>>',
+            \ 'texthl': 'MyWarningMsg',
+            \ }
+let g:neomake_python_pep8_maker = {'args': ['--ignore', 'E501']}
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
