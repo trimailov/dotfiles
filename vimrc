@@ -93,6 +93,9 @@ set mouse=a
 " Delete trailing whitespaces on save
 autocmd BufWritePre * :%s/\s\+$//e
 
+" run Neomake for syntax checking
+autocmd BufWrite * :Neomake
+
 " Highlight 80th column
 set colorcolumn=80
 
