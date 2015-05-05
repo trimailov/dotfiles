@@ -139,6 +139,9 @@ let g:netrw_liststyle=3
 " Do not show .pyc files in Explore
 let g:netrw_list_hide = '\.pyc$'
 
+" map TagbarToggle to a shortcut
+nnoremap <leader>t :TagbarToggle<cr>
+
 " map CtrlP to a shortcut
 nnoremap <leader>p :CtrlP<cr>
 
