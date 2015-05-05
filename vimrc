@@ -96,6 +96,10 @@ autocmd BufWritePre * :%s/\s\+$//e
 " run Neomake for syntax checking
 autocmd BufWrite * :Neomake
 
+" in html use 2 spaces for tab
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
+
 " Highlight 80th column
 set colorcolumn=80
 
