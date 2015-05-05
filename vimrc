@@ -36,6 +36,9 @@ let g:neomake_python_pep8_maker = {'args': ['--ignore', 'E501']}
 
 " add TagBar
 Plugin 'majutsushi/tagbar'
+" plugin for ag - the silver searcher
+Plugin 'rking/ag.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
