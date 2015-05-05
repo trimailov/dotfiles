@@ -34,6 +34,8 @@ let g:neomake_warning_sign = {
             \ }
 let g:neomake_python_pep8_maker = {'args': ['--ignore', 'E501']}
 
+" add TagBar
+Plugin 'majutsushi/tagbar'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
