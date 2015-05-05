@@ -17,6 +17,9 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 " Nim for Vim
 Plugin 'zah/nimrod.vim'
+" NerdTree
+Plugin 'scrooloose/nerdtree'
+let NERDTreeIgnore = ['\.pyc$']
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
