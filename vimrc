@@ -40,6 +40,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'rking/ag.vim'
 " Better Python autoindentation
 Plugin 'hynek/vim-python-pep8-indent'
+" RST Plugin
+Plugin 'Rykka/riv.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
