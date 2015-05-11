@@ -38,6 +38,8 @@ let g:neomake_python_pep8_maker = {'args': ['--ignore', 'E501']}
 Plugin 'majutsushi/tagbar'
 " plugin for ag - the silver searcher
 Plugin 'rking/ag.vim'
+" Better Python autoindentation
+Plugin 'hynek/vim-python-pep8-indent'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -82,7 +84,7 @@ set tabstop=4
 set shiftwidth=4
 
 " Enable autoindent
-set cindent
+set smartindent
 
 " make backspace work like most other apps
 set backspace=2
