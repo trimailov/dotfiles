@@ -142,6 +142,8 @@ let mapleader = ","
 
 " map Explore to a shortcut
 nnoremap <leader>n :NERDTreeToggle<cr>
+" map File reveal in tree to a shortcut
+nnoremap <leader>r :NERDTreeFind<cr>
 " show Explore as a tree
 let g:netrw_liststyle=3
 " Do not show .pyc files in Explore
