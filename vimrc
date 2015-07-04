@@ -152,8 +152,8 @@ let g:netrw_list_hide = '\.pyc$'
 " map TagbarToggle to a shortcut
 nnoremap <leader>t :TagbarToggle<cr>
 
-" map CtrlP to a shortcut
-nnoremap <leader>p :CtrlP<cr>
+" turn of search highlighting with a shortcut
+nnoremap <leader>h :set nohls<cr>
 
 " Autocomplete to TAB
 inoremap <Tab> <C-P>
