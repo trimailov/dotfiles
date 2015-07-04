@@ -42,6 +42,8 @@ Plugin 'rking/ag.vim'
 Plugin 'hynek/vim-python-pep8-indent'
 " RST Plugin
 Plugin 'Rykka/riv.vim'
+" gruvbox colorscheme
+Plugin 'morhetz/gruvbox'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -174,7 +176,8 @@ autocmd BufNewFile,BufRead *.s   set syntax=arm
 " ==== COLORS ====
 let g:molokai_original = 1
 
-colorscheme molokai
+colorscheme gruvbox
+set bg=dark
 " ====================
 
 " ==== NIM LANG ====
