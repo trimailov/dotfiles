@@ -132,6 +132,9 @@ set autoread
 " show search result while writing search query
 set incsearch
 
+" turn of search highlighting with a shortcut
+set nohls
+
 " turn on syntax highlighting
 syntax on
 
@@ -150,9 +153,6 @@ let g:netrw_list_hide = '\.pyc$'
 
 " map TagbarToggle to a shortcut
 nnoremap <leader>t :TagbarToggle<cr>
-
-" turn of search highlighting with a shortcut
-nnoremap <leader>h :set nohls<cr>
 
 " Autocomplete to TAB
 inoremap <Tab> <C-P>
