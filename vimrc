@@ -102,9 +102,10 @@ autocmd BufWritePre * :%s/\s\+$//e
 " run Neomake for syntax checking
 autocmd BufWrite * :Neomake
 
-" in html use 2 spaces for tab
+" with certain file types use 2 spaces for tab
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
 " Highlight 80th column
 set colorcolumn=80
@@ -173,6 +174,9 @@ inoremap # X<C-H>#
 
 " Syntax highlighting for ARM assembly
 autocmd BufNewFile,BufRead *.s   set syntax=arm
+
+" Syntax highlighting for yaml
+autocmd BufNewFile,BufRead *.sls   set syntax=yaml
 " ====================
 
 " ==== COLORS ====
