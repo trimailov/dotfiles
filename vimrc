@@ -15,8 +15,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 " Fugitive - git for vim
 Plugin 'tpope/vim-fugitive'
-" Nim for Vim
-Plugin 'zah/nimrod.vim'
 " NerdTree
 Plugin 'scrooloose/nerdtree'
 let NERDTreeIgnore = ['\.pyc$']
