@@ -62,6 +62,9 @@ filetype plugin indent on    " required
 
 " ==== Vundle settings end ====
 
+" Set shell to bash in case bash incompatible shell is used
+set shell=/bin/bash
+
 " Show line numbers
 set number
 
