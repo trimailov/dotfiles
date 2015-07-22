@@ -42,8 +42,6 @@ Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'Rykka/riv.vim'
 " gruvbox colorscheme
 Plugin 'morhetz/gruvbox'
-" YouCompleteMe autocompletion plugin
-Plugin 'Valloric/YouCompleteMe'
 
 " ctrlp plugin
 Plugin 'kien/ctrlp.vim'
