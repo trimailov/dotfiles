@@ -1,0 +1,18 @@
+# GIT aliases
+
+alias ga="git add"
+alias gb="git branch"
+alias gba="git branch -a"
+alias gc="git commit"
+alias gcmsg="git commit -m"
+alias gco="git checkout"
+alias gd="git diff"
+alias glg="git log"
+alias grbi="git rebase --interactive"
+alias gst="git status"
+alias gsta="git stash"
+alias gstp="git stash pop"
+alias gp="git push"
+alias gpf="git push -f"
+alias gup="git pull"
+alias gupr="git pull --rebase"
