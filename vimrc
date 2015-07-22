@@ -186,8 +186,6 @@ autocmd BufNewFile,BufRead *.sls   set syntax=yaml
 " ====================
 
 " ==== COLORS ====
-let g:molokai_original = 1
-
 colorscheme gruvbox
 set bg=dark
 " ====================
