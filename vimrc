@@ -33,13 +33,13 @@ let g:neomake_warning_sign = {
 let g:neomake_python_pep8_maker = {'args': ['--ignore', 'E501']}
 
 " add TagBar
-Plugin 'majutsushi/tagbar'
+" Plugin 'majutsushi/tagbar'
 " plugin for ag - the silver searcher
 Plugin 'rking/ag.vim'
 " Better Python autoindentation
 Plugin 'hynek/vim-python-pep8-indent'
 " RST Plugin
-Plugin 'Rykka/riv.vim'
+" Plugin 'Rykka/riv.vim'
 " gruvbox colorscheme
 Plugin 'morhetz/gruvbox'
 
