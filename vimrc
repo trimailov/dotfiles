@@ -109,6 +109,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 autocmd BufWrite * :Neomake
 
 " with certain file types use 2 spaces for tab
+autocmd FileType css setlocal shiftwidth=2 tabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
