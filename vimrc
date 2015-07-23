@@ -184,6 +184,9 @@ autocmd BufNewFile,BufRead *.s   set syntax=arm
 
 " Syntax highlighting for yaml
 autocmd BufNewFile,BufRead *.sls   set syntax=yaml
+
+" Syntax highlighting for less
+autocmd BufNewFile,BufRead *.less   set syntax=css
 " ====================
 
 " ==== COLORS ====
