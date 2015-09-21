@@ -48,6 +48,8 @@ Plugin 'morhetz/gruvbox'
 Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
 " rust syntax highlighting and file detection
 Plugin 'rust-lang/rust.vim'
 " toml filetype support
