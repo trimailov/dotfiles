@@ -48,6 +48,12 @@ Plugin 'morhetz/gruvbox'
 Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+" rust syntax highlighting and file detection
+Plugin 'rust-lang/rust.vim'
+" toml filetype support
+Plugin 'cespare/vim-toml'
+" html5 syntax highlighting
+Plugin 'othree/html5.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
