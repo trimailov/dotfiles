@@ -18,6 +18,7 @@ Plugin 'tpope/vim-fugitive'
 " NerdTree
 Plugin 'scrooloose/nerdtree'
 let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeShowHidden=1
 
 " add neomake
 Plugin 'benekastah/neomake'
