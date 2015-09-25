@@ -42,7 +42,7 @@ Plugin 'hynek/vim-python-pep8-indent'
 " RST Plugin
 " Plugin 'Rykka/riv.vim'
 " gruvbox colorscheme
-Plugin 'morhetz/gruvbox'
+" Plugin 'morhetz/gruvbox'
 
 " ctrlp plugin
 Plugin 'kien/ctrlp.vim'
@@ -199,7 +199,7 @@ autocmd BufNewFile,BufRead *.less   set syntax=css
 " ====================
 
 " ==== COLORS ====
-colorscheme gruvbox
+colorscheme smyck
 set bg=dark
 " ====================
 
