@@ -215,3 +215,6 @@ endf
 " Jump to tag
 nn <M-g> :call JumpToDef()<cr>
 ino <M-g> <esc>:call JumpToDef()<cr>i
+
+" highlight cureent line
+set cursorline
