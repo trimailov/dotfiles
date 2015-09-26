@@ -168,7 +168,7 @@ let g:netrw_liststyle=3
 let g:netrw_list_hide = '\.pyc$'
 
 " map TagbarToggle to a shortcut
-nnoremap <leader>t :TagbarToggle<cr>
+" nnoremap <leader>t :TagbarToggle<cr>
 
 " Autocomplete to TAB
 inoremap <Tab> <C-P>
