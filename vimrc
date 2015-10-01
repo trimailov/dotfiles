@@ -34,7 +34,7 @@ let g:neomake_warning_sign = {
 let g:neomake_python_pep8_maker = {'args': ['--ignore', 'E501']}
 
 " add TagBar
-" Plugin 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 " plugin for ag - the silver searcher
 Plugin 'rking/ag.vim'
 " Better Python autoindentation
@@ -168,7 +168,7 @@ let g:netrw_liststyle=3
 let g:netrw_list_hide = '\.pyc$'
 
 " map TagbarToggle to a shortcut
-" nnoremap <leader>t :TagbarToggle<cr>
+nnoremap <leader>t :TagbarToggle<cr>
 
 " Autocomplete to TAB
 inoremap <Tab> <C-P>
