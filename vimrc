@@ -40,8 +40,8 @@ Plugin 'rking/ag.vim'
 " Better Python autoindentation
 Plugin 'hynek/vim-python-pep8-indent'
 " RST Plugin
-" Plugin 'Rykka/riv.vim'
-" gruvbox colorscheme
+Plugin 'Rykka/riv.vim'
+let g:riv_fold_auto_update = 0
 " Plugin 'morhetz/gruvbox'
 
 " ctrlp plugin
