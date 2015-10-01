@@ -42,7 +42,8 @@ Plugin 'hynek/vim-python-pep8-indent'
 " RST Plugin
 Plugin 'Rykka/riv.vim'
 let g:riv_fold_auto_update = 0
-" Plugin 'morhetz/gruvbox'
+" screw it - use solorized scheme
+Plugin 'altercation/vim-colors-solarized'
 
 " ctrlp plugin
 Plugin 'kien/ctrlp.vim'
@@ -199,7 +200,7 @@ autocmd BufNewFile,BufRead *.less   set syntax=css
 " ====================
 
 " ==== COLORS ====
-colorscheme smyck
+colorscheme solarized
 set bg=dark
 " ====================
 
