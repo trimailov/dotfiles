@@ -57,6 +57,8 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
 " html5 syntax highlighting
 Plugin 'othree/html5.vim'
+" surround plugin
+Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
