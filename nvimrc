@@ -220,6 +220,7 @@ cnoreabbrev gd Gdiff
 cnoreabbrev gst Gstatus
 cnoreabbrev gw Gwrite
 cnoreabbrev gr Gread
+cnoreabbrev gb Gblame
 " ====================
 
 " ==== COLORS ====
