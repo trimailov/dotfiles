@@ -19,3 +19,9 @@ alias gp="git push"
 alias gpf="git push -f"
 alias gup="git pull"
 alias gupr="git pull --rebase"
+
+# VIM aliases
+
+# it's just annoying to accidenatly get into vi
+alias nvi="nvim"
+alias vi="vim"
