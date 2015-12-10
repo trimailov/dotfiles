@@ -59,6 +59,12 @@ Plugin 'cespare/vim-toml'
 Plugin 'othree/html5.vim'
 " surround plugin
 Plugin 'tpope/vim-surround'
+" swift support
+Plugin 'toyamarinyon/vim-swift'
+" scss support
+Plugin 'cakebaker/scss-syntax.vim'
+" nginx syntax
+Plugin 'evanmiller/nginx-vim-syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -122,6 +128,8 @@ autocmd BufWrite * :Neomake
 
 " with certain file types use 2 spaces for tab
 autocmd FileType css setlocal shiftwidth=2 tabstop=2
+autocmd FileType scss setlocal shiftwidth=2 tabstop=2
+autocmd FileType sass setlocal shiftwidth=2 tabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
@@ -199,25 +207,22 @@ autocmd BufNewFile,BufRead *.sls   set syntax=yaml
 
 " Syntax highlighting for less
 autocmd BufNewFile,BufRead *.less   set syntax=css
+
+" highlight cureent line
+set cursorline
+
+" open html files with htmldjango syntax highlight
+au BufNewFile,BufRead *.html set filetype=htmldjango
+
+" alias some fugitive.vim commands
+cnoreabbrev gc Gcommit
+cnoreabbrev gd Gdiff
+cnoreabbrev gst Gstatus
+cnoreabbrev gw Gwrite
+cnoreabbrev gr Gread
 " ====================
 
 " ==== COLORS ====
 colorscheme solarized
 set bg=dark
 " ====================
-
-" ==== NIM LANG ====
-fun! JumpToDef()
-  if exists("*GotoDefinition_" . &filetype)
-    call GotoDefinition_{&filetype}()
-  else
-    exe "norm! \<C-]>"
-  endif
-endf
-
-" Jump to tag
-nn <M-g> :call JumpToDef()<cr>
-ino <M-g> <esc>:call JumpToDef()<cr>i
-
-" highlight cureent line
-set cursorline

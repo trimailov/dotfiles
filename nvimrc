@@ -15,6 +15,56 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 " Fugitive - git for vim
 Plugin 'tpope/vim-fugitive'
+" NerdTree
+Plugin 'scrooloose/nerdtree'
+let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeShowHidden=1
+
+" add neomake
+Plugin 'benekastah/neomake'
+let g:neomake_error_sign = {
+            \ 'text': '>>',
+            \ 'texthl': 'ErrorMsg',
+            \ }
+hi MyWarningMsg ctermbg=3 ctermfg=0
+let g:neomake_warning_sign = {
+            \ 'text': '>>',
+            \ 'texthl': 'MyWarningMsg',
+            \ }
+let g:neomake_python_pep8_maker = {'args': ['--ignore', 'E501']}
+
+" add TagBar
+Plugin 'majutsushi/tagbar'
+" plugin for ag - the silver searcher
+Plugin 'rking/ag.vim'
+" Better Python autoindentation
+Plugin 'hynek/vim-python-pep8-indent'
+" RST Plugin
+Plugin 'Rykka/riv.vim'
+let g:riv_fold_auto_update = 0
+" screw it - use solorized scheme
+Plugin 'altercation/vim-colors-solarized'
+
+" ctrlp plugin
+Plugin 'kien/ctrlp.vim'
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" rust syntax highlighting and file detection
+Plugin 'rust-lang/rust.vim'
+" toml filetype support
+Plugin 'cespare/vim-toml'
+" html5 syntax highlighting
+Plugin 'othree/html5.vim'
+" surround plugin
+Plugin 'tpope/vim-surround'
+" swift support
+Plugin 'toyamarinyon/vim-swift'
+" scss support
+Plugin 'cakebaker/scss-syntax.vim'
+" nginx syntax
+Plugin 'evanmiller/nginx-vim-syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -32,6 +82,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " ==== Vundle settings end ====
+
+" Set shell to bash in case bash incompatible shell is used
+set shell=/bin/bash
 
 " Show line numbers
 set number
@@ -59,7 +112,7 @@ set tabstop=4
 set shiftwidth=4
 
 " Enable autoindent
-set cindent
+set smartindent
 
 " make backspace work like most other apps
 set backspace=2
@@ -69,6 +122,17 @@ set mouse=a
 
 " Delete trailing whitespaces on save
 autocmd BufWritePre * :%s/\s\+$//e
+
+" run Neomake for syntax checking
+autocmd BufWrite * :Neomake
+
+" with certain file types use 2 spaces for tab
+autocmd FileType css setlocal shiftwidth=2 tabstop=2
+autocmd FileType scss setlocal shiftwidth=2 tabstop=2
+autocmd FileType sass setlocal shiftwidth=2 tabstop=2
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
 " Highlight 80th column
 set colorcolumn=80
@@ -86,11 +150,17 @@ set splitright
 " do not save swap files
 set noswapfile
 
+" copy to OS clipboard
+set clipboard=unnamed
+
 " detect file changes
 set autoread
 
 " show search result while writing search query
 set incsearch
+
+" turn of search highlighting with a shortcut
+set nohls
 
 " turn on syntax highlighting
 syntax on
@@ -100,14 +170,16 @@ syntax on
 let mapleader = ","
 
 " map Explore to a shortcut
-nnoremap <leader>n :Explore<cr>
+nnoremap <leader>n :NERDTreeToggle<cr>
+" map File reveal in tree to a shortcut
+nnoremap <leader>r :NERDTreeFind<cr>
 " show Explore as a tree
 let g:netrw_liststyle=3
 " Do not show .pyc files in Explore
 let g:netrw_list_hide = '\.pyc$'
 
-" map CtrlP to a shortcut
-nnoremap <leader>p :CtrlP<cr>
+" map TagbarToggle to a shortcut
+nnoremap <leader>t :TagbarToggle<cr>
 
 " Autocomplete to TAB
 inoremap <Tab> <C-P>
@@ -116,10 +188,10 @@ inoremap <Tab> <C-P>
 inoremap <C-P> <C-[>
 
 " Better moving between splits
-nnoremap <C-h> <C-W>h
-nnoremap <C-j> <C-W>j
-nnoremap <C-k> <C-W>k
-nnoremap <C-l> <C-W>l
+nnoremap <m-h> <C-W>h
+nnoremap <m-j> <C-W>j
+nnoremap <m-k> <C-W>k
+nnoremap <m-l> <C-W>l
 
 " No need of shift for :
 nnoremap ; :
@@ -129,10 +201,28 @@ inoremap # X<C-H>#
 
 " Syntax highlighting for ARM assembly
 autocmd BufNewFile,BufRead *.s   set syntax=arm
+
+" Syntax highlighting for yaml
+autocmd BufNewFile,BufRead *.sls   set syntax=yaml
+
+" Syntax highlighting for less
+autocmd BufNewFile,BufRead *.less   set syntax=css
+
+" highlight cureent line
+set cursorline
+
+" open html files with htmldjango syntax highlight
+au BufNewFile,BufRead *.html set filetype=htmldjango
+
+" alias some fugitive.vim commands
+cnoreabbrev gc Gcommit
+cnoreabbrev gd Gdiff
+cnoreabbrev gst Gstatus
+cnoreabbrev gw Gwrite
+cnoreabbrev gr Gread
 " ====================
 
 " ==== COLORS ====
-let g:molokai_original = 1
-
-colors molokai
+colorscheme solarized
+set bg=dark
 " ====================
