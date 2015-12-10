@@ -8,5 +8,8 @@ set -gx  LC_CTYPE en_US.UTF-8
 # set default editor
 set -x EDITOR nvim
 
+# homebrew sbin
+set -x PATH $PATH /usr/local/sbin
+
 # remove welcome message
 set fish_greeting
