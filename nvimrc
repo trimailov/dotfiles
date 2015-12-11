@@ -216,6 +216,8 @@ set cursorline
 " open html files with htmldjango syntax highlight
 au BufNewFile,BufRead *.html set filetype=htmldjango
 
+set omnifunc+=javascriptcomplete#CompleteJS
+
 " alias some fugitive.vim commands
 cnoreabbrev gc Gcommit
 cnoreabbrev gd Gdiff
