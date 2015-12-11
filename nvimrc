@@ -65,6 +65,8 @@ Plugin 'toyamarinyon/vim-swift'
 Plugin 'cakebaker/scss-syntax.vim'
 " nginx syntax
 Plugin 'evanmiller/nginx-vim-syntax'
+" javascript plugin
+Plugin 'pangloss/vim-javascript'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
