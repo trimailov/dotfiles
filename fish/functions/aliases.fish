@@ -3,7 +3,7 @@
 alias ga="git add"
 alias gb="git branch"
 alias gba="git branch -a"
-alias gc="git commit"
+alias gc="git commit -v"
 alias gcmsg="git commit -m"
 alias gco="git checkout"
 alias gd="git diff"
