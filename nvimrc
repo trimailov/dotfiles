@@ -166,6 +166,12 @@ set incsearch
 " set search highlighting
 set hlsearch
 
+" highlight cureent line
+set cursorline
+
+" do recursive file find
+set path+=**
+
 " turn on syntax highlighting
 syntax on
 
@@ -214,9 +220,6 @@ autocmd BufNewFile,BufRead *.sls   set syntax=yaml
 
 " Syntax highlighting for less
 autocmd BufNewFile,BufRead *.less   set syntax=css
-
-" highlight cureent line
-set cursorline
 
 " open html files with htmldjango syntax highlight
 au BufNewFile,BufRead *.html set filetype=htmldjango
