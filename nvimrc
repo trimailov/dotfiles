@@ -224,7 +224,7 @@ au BufNewFile,BufRead *.html set filetype=htmldjango
 set omnifunc+=javascriptcomplete#CompleteJS
 
 " alias some fugitive.vim commands
-cnoreabbrev gc Gcommit
+cnoreabbrev gc Gcommit -v
 cnoreabbrev gd Gdiff
 cnoreabbrev gst Gstatus
 cnoreabbrev gw Gwrite
