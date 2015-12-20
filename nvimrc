@@ -163,9 +163,6 @@ set autoread
 " show search result while writing search query
 set incsearch
 
-" set search highlighting
-set hlsearch
-
 " highlight cureent line
 set cursorline
 
@@ -178,9 +175,6 @@ syntax on
 " ==== KEY REMAPS ====
 " change leader key to ,
 let mapleader = ","
-
-" turn off search highlight
-nnoremap <leader>s :nohls<cr>
 
 " map Explore to a shortcut
 nnoremap <leader>n :NERDTreeToggle<cr>
