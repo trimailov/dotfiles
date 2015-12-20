@@ -209,6 +209,7 @@ inoremap # X<C-H>#
 " search results are in the middle of the screen
 nnoremap n nzz
 nnoremap N Nzz
+nnoremap * *zz
 
 " Syntax highlighting for ARM assembly
 autocmd BufNewFile,BufRead *.s   set syntax=arm
