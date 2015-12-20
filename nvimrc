@@ -212,6 +212,10 @@ nnoremap ; :
 " Do not delete whitespace when inserting #
 inoremap # X<C-H>#
 
+" search results are in the middle of the screen
+nnoremap n nzz
+nnoremap N Nzz
+
 " Syntax highlighting for ARM assembly
 autocmd BufNewFile,BufRead *.s   set syntax=arm
 
