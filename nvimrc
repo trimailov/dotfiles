@@ -217,6 +217,10 @@ nnoremap n nzz
 nnoremap N Nzz
 nnoremap * *zz
 
+" exit terminal in a more natural way
+tnoremap <Esc> <C-\><C-n>
+tnoremap <C-]> <C-\><C-n>
+
 " Syntax highlighting for ARM assembly
 autocmd BufNewFile,BufRead *.s   set syntax=arm
 
