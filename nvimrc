@@ -237,6 +237,7 @@ set omnifunc+=javascriptcomplete#CompleteJS
 
 " alias some fugitive.vim commands
 cnoreabbrev gc Gcommit -v
+cnoreabbrev gca Gcommit -v -a
 cnoreabbrev gd Gdiff
 cnoreabbrev gst Gstatus
 cnoreabbrev gw Gwrite
