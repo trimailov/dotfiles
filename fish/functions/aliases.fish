@@ -26,3 +26,6 @@ alias gupr="git pull --rebase"
 # it's just annoying to accidenatly get into vi
 alias nvi="nvim"
 alias vi="vim"
+
+# TIG aliases
+alias tiga="tig --all"
