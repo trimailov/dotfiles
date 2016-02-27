@@ -179,6 +179,12 @@ syntax on
 " change leader key to ,
 let mapleader = ","
 
+" use `contextual` arrow keys
+" i.e. always go up and down by visible line, and not by new-line breaks
+" e.g. when line is longer than the width of a window
+nnoremap k gk
+nnoremap j gj
+
 " shortcut to turn off search highlighting
 nnoremap <leader>s :nohls<cr>
 
