@@ -124,6 +124,9 @@ set backspace=2
 " enable mouse scroll in terminal vim
 set mouse=a
 
+" I want fugitive to open diffs vertically all the time
+set diffopt=vertical
+
 " Delete trailing whitespaces on save
 autocmd BufWritePre * :%s/\s\+$//e
 
