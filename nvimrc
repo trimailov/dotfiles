@@ -112,6 +112,9 @@ set expandtab
 " Tab is 4 spaces
 set tabstop=4
 
+" Delete tab at once, even if it was inserted as spaces
+set softtabstop=4
+
 " Number of spaces for autoindent
 set shiftwidth=4
 
