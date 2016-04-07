@@ -11,6 +11,9 @@ set -x EDITOR nvim
 # homebrew sbin
 set -x PATH $PATH /usr/local/sbin
 
+# basictex bin
+set -x PATH $PATH /usr/local/texlive/2015basic/bin/universal-darwin
+
 # remove welcome message
 set fish_greeting
 
