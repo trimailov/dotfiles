@@ -44,6 +44,8 @@ Plugin 'Rykka/riv.vim'
 let g:riv_fold_auto_update = 0
 " screw it - use solorized scheme
 Plugin 'altercation/vim-colors-solarized'
+" if different mood use gruvbox
+Plugin 'morhetz/gruvbox'
 
 " ctrlp plugin
 Plugin 'kien/ctrlp.vim'
@@ -260,6 +262,6 @@ cnoreabbrev gb Gblame
 " ====================
 
 " ==== COLORS ====
-colorscheme solarized
+colorscheme gruvbox
 set bg=dark
 " ====================
