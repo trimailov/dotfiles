@@ -69,8 +69,6 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'evanmiller/nginx-vim-syntax'
 " javascript plugin
 Plugin 'pangloss/vim-javascript'
-" fish shell plugin
-Plugin 'dag/vim-fish'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
