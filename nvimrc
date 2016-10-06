@@ -260,6 +260,6 @@ cnoreabbrev gb Gblame
 " ====================
 
 " ==== COLORS ====
-colorscheme gruvbox
-set bg=dark
+colorscheme solarized
+set bg=light
 " ====================
