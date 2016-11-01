@@ -17,7 +17,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 " NerdTree
 Plugin 'scrooloose/nerdtree'
-let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '__pycache__$']
 let NERDTreeShowHidden=1
 
 " add neomake
