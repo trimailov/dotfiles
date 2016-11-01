@@ -69,6 +69,8 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'evanmiller/nginx-vim-syntax'
 " javascript plugin
 Plugin 'pangloss/vim-javascript'
+" editorconfig plugin: http://editorconfig.org/
+Plugin 'editorconfig/editorconfig-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
