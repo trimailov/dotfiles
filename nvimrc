@@ -31,7 +31,11 @@ let g:neomake_warning_sign = {
             \ 'text': '>>',
             \ 'texthl': 'MyWarningMsg',
             \ }
-let g:neomake_python_pep8_maker = {'args': ['--ignore', 'E501']}
+
+let g:neomake_python_enabled_makers = ['flake8']
+let g:neomake_python_flake8_maker = {
+            \ 'args': ['--ignore=E501'],
+            \ }
 
 " add TagBar
 Plugin 'majutsushi/tagbar'
