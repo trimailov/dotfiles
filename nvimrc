@@ -25,16 +25,21 @@ Plugin 'benekastah/neomake'
 let g:neomake_error_sign = {
             \ 'text': '>>',
             \ 'texthl': 'ErrorMsg',
-            \ }
 hi MyWarningMsg ctermbg=3 ctermfg=0
 let g:neomake_warning_sign = {
-            \ 'text': '>>',
+            \ 'text': '->',
             \ 'texthl': 'MyWarningMsg',
             \ }
 
 let g:neomake_python_enabled_makers = ['flake8']
 let g:neomake_python_flake8_maker = {
             \ 'args': ['--ignore=E501'],
+            \ }
+
+let g:neomake_javascript_enabled_makers = ['jshint']
+let g:neomake_javascript_jshint_maker = {
+            \ 'args': ['--verbose'],
+            \ 'errorformat': '%A%f: line %l\, col %v\, %m \(%t%*\d\)',
             \ }
 
 " add TagBar
