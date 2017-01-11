@@ -24,7 +24,8 @@ let NERDTreeShowHidden=1
 Plugin 'benekastah/neomake'
 let g:neomake_error_sign = {
             \ 'text': '>>',
-            \ 'texthl': 'ErrorMsg',
+            \ 'texthl': 'ErrorMsg', 
+            \ }
 hi MyWarningMsg ctermbg=3 ctermfg=0
 let g:neomake_warning_sign = {
             \ 'text': '->',
@@ -225,6 +226,9 @@ let g:netrw_list_hide = '\.pyc$'
 
 " map TagbarToggle to a shortcut
 nnoremap <leader>t :TagbarToggle<cr>
+
+" map CtrlPBuffer to a shortcut
+nnoremap <leader>m :CtrlPBuffer<cr>
 
 " Autocomplete to TAB
 inoremap <Tab> <C-P>
