@@ -141,11 +141,18 @@ set mouse=a
 " I want fugitive to open diffs vertically all the time
 set diffopt=vertical
 
-" Delete trailing whitespaces on save
-autocmd BufWritePre * :%s/\s\+$//e
+" Delete trailing whitespaces on save, and save current cursor position
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " run Neomake for syntax checking
-autocmd BufWrite * :Neomake
+autocmd! BufWrite * :Neomake
 
 " with certain file types use 2 spaces for tab
 autocmd FileType css setlocal shiftwidth=2 tabstop=2
