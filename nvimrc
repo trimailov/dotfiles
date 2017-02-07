@@ -34,12 +34,12 @@ let g:neomake_warning_sign = {
 
 let g:neomake_python_enabled_makers = ['flake8']
 let g:neomake_python_flake8_maker = {
-            \ 'args': ['--ignore=E501'],
+            \ 'args': ['--max-line-length=100'],
             \ }
 
 let g:neomake_javascript_enabled_makers = ['jshint']
 let g:neomake_javascript_jshint_maker = {
-            \ 'args': ['--verbose'],
+            \ 'args': ['--verbose', '--esversion=6'],
             \ 'errorformat': '%A%f: line %l\, col %v\, %m \(%t%*\d\)',
             \ }
 
