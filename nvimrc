@@ -34,7 +34,7 @@ let g:neomake_warning_sign = {
 
 let g:neomake_python_enabled_makers = ['flake8']
 let g:neomake_python_flake8_maker = {
-            \ 'args': ['--max-line-length=100'],
+            \ 'args': ['--ignore=E501'],
             \ }
 
 let g:neomake_javascript_enabled_makers = ['jshint']
