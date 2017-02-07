@@ -82,6 +82,14 @@ Plugin 'pangloss/vim-javascript'
 " editorconfig plugin: http://editorconfig.org/
 Plugin 'editorconfig/editorconfig-vim'
 
+" JSX syntax highlighting and indenting
+Plugin 'mxw/vim-jsx'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'othree/yajs'
+
+" use JSX syntax highlighting on .js files as well
+let g:jsx_ext_required = 0
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
