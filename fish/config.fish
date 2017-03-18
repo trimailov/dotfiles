@@ -14,6 +14,18 @@ set -x PATH $PATH /usr/local/sbin
 # basictex bin
 set -x PATH $PATH /usr/local/texlive/2015basic/bin/universal-darwin
 
+# pyenv's shims path
+set -x PATH ~/.pyenv/shims $PATH
+
+# GOPATH
+set -x GOPATH ~/Documents/programming/Go
+set -x PATH $PATH $GOPATH/bin
+
+# ANDROID
+set -x ANDROID_HOME ~/Library/Android/sdk
+set -x PATH $PATH $ANDROID_HOME/tools
+set -x PATH $PATH $ANDROID_HOME/platform-tools
+
 # remove welcome message
 set fish_greeting
 
