@@ -16,6 +16,7 @@ set -x PATH $PATH /usr/local/texlive/2015basic/bin/universal-darwin
 
 # pyenv's shims path
 set -x PATH ~/.pyenv/shims $PATH
+set -x PYTHON_CONFIGURE_OPTS "--enable-framework"
 
 # GOPATH
 set -x GOPATH ~/Documents/programming/Go
