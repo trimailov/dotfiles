@@ -61,6 +61,8 @@ let g:ale_linters = {
 \}
 let g:ale_echo_msg_format = '[%linter%] %s'
 
+Plugin 'Valloric/YouCompleteMe'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -94,7 +96,7 @@ set softtabstop=4
 set shiftwidth=4
 
 " Enable autoindent
-set smartindent
+" set smartindent
 
 " make backspace work like most other apps
 set backspace=2
