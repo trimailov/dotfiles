@@ -19,6 +19,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '__pycache__$']
 let NERDTreeShowHidden=1
+let NERDTreeWinPos = "right"
 
 " plugin for ag - the silver searcher
 Plugin 'rking/ag.vim'
