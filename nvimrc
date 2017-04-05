@@ -17,7 +17,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 " NerdTree
 Plugin 'scrooloose/nerdtree'
-let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '__pycache__$']
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '__pycache__$', '\.DS_Store']
 let NERDTreeShowHidden=1
 let NERDTreeWinPos = "right"
 
