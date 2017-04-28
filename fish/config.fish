@@ -18,6 +18,9 @@ set -x PATH $PATH /usr/local/texlive/2015basic/bin/universal-darwin
 set -x PATH ~/.pyenv/shims $PATH
 set -x PYTHON_CONFIGURE_OPTS "--enable-framework"
 
+# Rust's Cargo bin
+set -x PATH $PATH ~/.cargo/bin
+
 # GOPATH
 set -x GOPATH ~/Documents/programming/Go
 set -x PATH $PATH $GOPATH/bin
