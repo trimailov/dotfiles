@@ -149,7 +149,9 @@ syntax on
 
 " ==== COLORS ====
 colorscheme solarized
-set bg=light
+set bg=dark
+let g:solarized_contrast = "high"
+
 " ====================
 
 " ==== KEY REMAPS ====
@@ -182,3 +184,9 @@ nnoremap <C-S-j> <C-W>j
 nnoremap <C-S-k> <C-W>k
 nnoremap <C-S-l> <C-W>l
 " ====================
+
+" NVIM specific
+if has('nvim')
+    let g:python_host_prog = '/Users/justas/dotfiles/.nvim_env/bin/python'
+    let g:python3_host_prog = '/Users/justas/dotfiles/.nvim_env3/bin/python'
+endif
