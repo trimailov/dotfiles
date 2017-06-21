@@ -19,7 +19,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '__pycache__$', '\.DS_Store']
 let NERDTreeShowHidden=1
-let NERDTreeWinPos = "right"
 
 " plugin for ag - the silver searcher
 Plugin 'rking/ag.vim'
@@ -63,6 +62,7 @@ let g:ale_linters = {
 let g:ale_echo_msg_format = '[%linter%] %s'
 
 Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Yggdroot/indentLine'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -149,7 +149,7 @@ syntax on
 
 " ==== COLORS ====
 colorscheme solarized
-set bg=dark
+set bg=light
 let g:solarized_contrast = "high"
 
 " ====================
@@ -189,4 +189,12 @@ nnoremap <C-S-l> <C-W>l
 if has('nvim')
     let g:python_host_prog = '/Users/justas/dotfiles/.nvim_env/bin/python'
     let g:python3_host_prog = '/Users/justas/dotfiles/.nvim_env3/bin/python'
+endif
+
+" MACVIM specific
+if has('mac')
+    " hide scrollbars
+    set guioptions-=L
+    set guioptions-=r
+    set guifont=Menlo:h12
 endif
