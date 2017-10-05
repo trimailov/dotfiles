@@ -30,7 +30,7 @@ Plugin 'altercation/vim-colors-solarized'
 " ctrlp plugin
 Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_cmd = 'CtrlPMRU'
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " html5 syntax highlighting
@@ -62,7 +62,10 @@ let g:ale_linters = {
 let g:ale_echo_msg_format = '[%linter%] %s'
 
 Plugin 'Valloric/YouCompleteMe'
-" Plugin 'Yggdroot/indentLine'
+
+Plugin 'ekalinin/Dockerfile.vim'
+
+Plugin 'jlanzarotta/bufexplorer'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -143,6 +146,10 @@ set cursorline
 " do recursive file find
 set path+=**
 
+" Python tracebacks (unittest + doctest output)
+set errorformat=\ %#File\ \"%f\"\\,\ line\ %l\\,\ %m
+set errorformat+=\@File\:\ %f
+
 " turn on syntax highlighting
 syntax on
 " ====================
@@ -183,6 +190,9 @@ nnoremap <C-S-h> <C-W>h
 nnoremap <C-S-j> <C-W>j
 nnoremap <C-S-k> <C-W>k
 nnoremap <C-S-l> <C-W>l
+
+" for tests
+nnoremap <leader>m :silent make!<cr>
 " ====================
 
 " NVIM specific
