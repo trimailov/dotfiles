@@ -30,3 +30,6 @@ alias vi="vim"
 
 # TIG aliases
 alias tiga="tig --all"
+
+# Misc.
+alias journal="mkdir -p ~/journal/(date +%Y); vim + ~/journal/(date +%Y)/(date +%Y-%m-%d).md"
