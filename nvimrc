@@ -155,9 +155,9 @@ syntax on
 " ====================
 
 " ==== COLORS ====
-colorscheme solarized
-set bg=light
-let g:solarized_contrast = "high"
+" colorscheme solarized
+" set bg=light
+" let g:solarized_contrast = "high"
 
 " ====================
 
@@ -202,9 +202,9 @@ if has('nvim')
 endif
 
 " MACVIM specific
-if has('mac')
-    " hide scrollbars
+if has('gui_running')
     set guioptions-=L
     set guioptions-=r
     set guifont=Menlo:h12
+    colorscheme base16-default-dark
 endif
