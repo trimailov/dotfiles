@@ -206,5 +206,4 @@ if has('gui_running')
     set guioptions-=L
     set guioptions-=r
     set guifont=Menlo:h12
-    colorscheme base16-default-dark
 endif
