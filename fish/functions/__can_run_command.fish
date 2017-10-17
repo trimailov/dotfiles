@@ -1,1 +1,1 @@
-/home/justas/.config/fisherman/nvm/__can_run_command.fish
+/Users/justas/.config/fisherman/nvm/__can_run_command.fish

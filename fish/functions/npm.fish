@@ -1,1 +1,1 @@
-/home/justas/.config/fisherman/nvm/npm.fish
+/Users/justas/.config/fisherman/nvm/npm.fish

@@ -1,1 +1,1 @@
-/home/justas/.config/fisherman/bass/functions/__bass.py
+/Users/justas/.config/fisherman/bass/functions/__bass.py

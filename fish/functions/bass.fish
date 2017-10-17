@@ -1,1 +1,1 @@
-/home/justas/.config/fisherman/bass/functions/bass.fish
+/Users/justas/.config/fisherman/bass/functions/bass.fish
