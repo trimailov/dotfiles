@@ -185,12 +185,6 @@ nnoremap <leader>n :NERDTreeToggle<cr>
 " map File reveal in tree to a shortcut
 nnoremap <leader>r :NERDTreeFind<cr>
 
-" Better moving between splits
-nnoremap <C-S-h> <C-W>h
-nnoremap <C-S-j> <C-W>j
-nnoremap <C-S-k> <C-W>k
-nnoremap <C-S-l> <C-W>l
-
 " for tests
 nnoremap <leader>m :silent make!<cr>
 " ====================
@@ -206,4 +200,8 @@ if has('gui_running')
     set guioptions-=L
     set guioptions-=r
     set guifont=Menlo:h12
+
+    " set color for macvim (https://stackoverflow.com/a/21114248)
+    let colors_name = 'Tomorrow-Night'
+    let macvim_skip_colorscheme=1
 endif
