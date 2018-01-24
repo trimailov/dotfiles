@@ -21,7 +21,12 @@ let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '__pycache__$', '\.DS_Store']
 let NERDTreeShowHidden=1
 
 " plugin for ag - the silver searcher
-Plugin 'rking/ag.vim'
+Plugin 'mileszs/ack.vim'
+let g:ackprg = 'ag --vimgrep'
+cnoreabbrev ag Ack
+cnoreabbrev aG Ack
+cnoreabbrev Ag Ack
+cnoreabbrev AG Ack
 " Better Python autoindentation
 Plugin 'hynek/vim-python-pep8-indent'
 " use solorized scheme
@@ -141,7 +146,7 @@ set incsearch
 set hlsearch
 
 " highlight cureent line
-set cursorline
+" set cursorline
 
 " do recursive file find
 set path+=**
@@ -202,6 +207,6 @@ if has('gui_running')
     set guifont=Menlo:h12
 
     " set color for macvim (https://stackoverflow.com/a/21114248)
-    let colors_name = 'Tomorrow-Night'
+    let colors_name = 'Tomorrow-Night-Bright'
     let macvim_skip_colorscheme=1
 endif
