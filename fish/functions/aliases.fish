@@ -1,3 +1,7 @@
+# ag aliases
+
+alias ag="ag --path-to-ignore ~/.ignore"
+
 # GIT aliases
 
 alias ga="git add"
