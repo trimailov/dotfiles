@@ -25,10 +25,10 @@ set -x PATH $PATH ~/.cargo/bin
 set -x GOPATH ~/Documents/programming/Go
 set -x PATH $PATH $GOPATH/bin
 
-# ANDROID
-set -x ANDROID_HOME ~/Library/Android/sdk
-set -x PATH $PATH $ANDROID_HOME/tools
-set -x PATH $PATH $ANDROID_HOME/platform-tools
+# # ANDROID
+# set -x ANDROID_HOME ~/Library/Android/sdk
+# set -x PATH $PATH $ANDROID_HOME/tools
+# set -x PATH $PATH $ANDROID_HOME/platform-tools
 
 # remove welcome message
 set fish_greeting
@@ -41,3 +41,4 @@ function rm_wifi_preferences --description 'Remove OS X wifi preferences on wifi
     rm /Library/Preferences/SystemConfiguration/NetworkInterfaces.plist
     rm /Library/Preferences/SystemConfiguration/preferences.plist
 end
+set -g fish_user_paths "/usr/local/opt/openssl/bin" $fish_user_paths
