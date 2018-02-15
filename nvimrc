@@ -192,6 +192,10 @@ nnoremap <leader>r :NERDTreeFind<cr>
 
 " for tests
 nnoremap <leader>m :silent make!<cr>
+
+" deoplete tab-complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
 " ====================
 
 " NVIM specific
