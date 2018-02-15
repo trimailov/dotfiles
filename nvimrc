@@ -42,8 +42,6 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 Plugin 'othree/html5.vim'
 " surround plugin
 Plugin 'tpope/vim-surround'
-" scss support
-Plugin 'cakebaker/scss-syntax.vim'
 " nginx syntax
 Plugin 'evanmiller/nginx-vim-syntax'
 
@@ -63,6 +61,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'w0rp/ale'
 let g:ale_linters = {
 \   'javascript': ['eslint'],
+\   'python': ['flake8'],
 \}
 let g:ale_echo_msg_format = '[%linter%] %s'
 
