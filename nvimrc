@@ -66,7 +66,20 @@ let g:ale_linters = {
 \}
 let g:ale_echo_msg_format = '[%linter%] %s'
 
-Plugin 'Valloric/YouCompleteMe'
+" autocompletion
+" Plugin 'Valloric/YouCompleteMe'
+
+" asynchronous autocompletion for neovim/vim8
+if has('nvim')
+  Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plugin 'zchee/deoplete-jedi'
+else
+  Plugin 'Shougo/deoplete.nvim'
+  Plugin 'zchee/deoplete-jedi'
+  Plugin 'roxma/nvim-yarp'
+  Plugin 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
 
 Plugin 'ekalinin/Dockerfile.vim'
 
