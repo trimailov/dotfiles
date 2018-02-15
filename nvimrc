@@ -196,8 +196,8 @@ nnoremap <leader>m :silent make!<cr>
 
 " NVIM specific
 if has('nvim')
-    let g:python_host_prog = '/Users/justas/dotfiles/.nvim_env/bin/python'
-    let g:python3_host_prog = '/Users/justas/dotfiles/.nvim_env3/bin/python'
+    let g:python_host_prog = '/Users/justas/.pyenv/shims/python2'
+    let g:python3_host_prog = '/Users/justas/.pyenv/shims/python3'
     colorscheme tomorrow-night-bright
     set termguicolors
 endif
