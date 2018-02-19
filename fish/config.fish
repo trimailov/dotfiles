@@ -17,6 +17,10 @@ set -x PATH $PATH /usr/local/texlive/2015basic/bin/universal-darwin
 # pyenv's shims path
 set -x PATH ~/.pyenv/shims $PATH
 set -x PYTHON_CONFIGURE_OPTS "--enable-framework"
+set -x PYENV_ROOT ~/.pyenv
+
+# load pyenv automaticaly
+status --is-interactive; and source (pyenv init -|psub)
 
 # Rust's Cargo bin
 set -x PATH $PATH ~/.cargo/bin
