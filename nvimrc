@@ -84,6 +84,11 @@ Plugin 'ekalinin/Dockerfile.vim'
 
 Plugin 'jlanzarotta/bufexplorer'
 
+Plugin 'vimwiki/vimwiki'
+" XXX: there's a bug with native shortcut https://github.com/vimwiki/vimwiki/issues/427
+" so remap it to something else
+nnoremap <leader>t :VimwikiToggleListItem<CR>
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
