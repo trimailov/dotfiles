@@ -32,11 +32,8 @@ Plugin 'hynek/vim-python-pep8-indent'
 " use solorized scheme
 Plugin 'altercation/vim-colors-solarized'
 
-" ctrlp plugin
-Plugin 'kien/ctrlp.vim'
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+" fzf plugin
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " html5 syntax highlighting
 Plugin 'othree/html5.vim'
@@ -198,6 +195,9 @@ cnoreabbrev gb Gblame
 " e.g. when line is longer than the width of a window
 nnoremap k gk
 nnoremap j gj
+
+" shortcut for fzf
+nnoremap <c-p> :FZF<cr>
 
 " shortcut to turn off search highlighting
 nnoremap <leader>s :nohls<cr>
