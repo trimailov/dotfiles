@@ -39,8 +39,6 @@ Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'othree/html5.vim'
 " surround plugin
 Plugin 'tpope/vim-surround'
-" nginx syntax
-Plugin 'evanmiller/nginx-vim-syntax'
 
 " javascript plugin
 Plugin 'pangloss/vim-javascript'
