@@ -22,11 +22,11 @@ let NERDTreeShowHidden=1
 
 " plugin for ag - the silver searcher
 Plugin 'mileszs/ack.vim'
-let g:ackprg = 'ag --vimgrep'
-cnoreabbrev ag Ack
-cnoreabbrev aG Ack
-cnoreabbrev Ag Ack
-cnoreabbrev AG Ack
+let g:ackprg = 'rg --vimgrep'
+cnoreabbrev rg Ack
+cnoreabbrev rG Ack
+cnoreabbrev Rg Ack
+cnoreabbrev RG Ack
 " Better Python autoindentation
 Plugin 'hynek/vim-python-pep8-indent'
 " use solorized scheme
