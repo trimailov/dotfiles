@@ -6,7 +6,7 @@ set -gx  LC_ALL en_US.UTF-8
 set -gx  LC_CTYPE en_US.UTF-8
 
 # set default editor
-set -x EDITOR vim
+set -x EDITOR nvim
 
 # homebrew sbin
 set -x PATH $PATH /usr/local/sbin
