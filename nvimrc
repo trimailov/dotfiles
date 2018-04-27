@@ -30,7 +30,6 @@ cnoreabbrev RG Ack
 " Better Python autoindentation
 Plugin 'hynek/vim-python-pep8-indent'
 " use solorized scheme
-Plugin 'altercation/vim-colors-solarized'
 
 " fzf plugin
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
