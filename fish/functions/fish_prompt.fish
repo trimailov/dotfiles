@@ -7,12 +7,12 @@ function fish_prompt
    set_color yellow
    printf '%s' (whoami)
    set_color normal
-   printf ' at '
+   printf '@'
 
    set_color magenta
    printf '%s' (hostname|cut -d . -f 1)
    set_color normal
-   printf ' in '
+   printf ':'
 
    set_color $fish_color_cwd
    printf '%s' (prompt_pwd)
@@ -23,9 +23,6 @@ function fish_prompt
 
    # Line 2
    echo
-   if test $VIRTUAL_ENV
-       printf "(%s) " (set_color blue)(basename $VIRTUAL_ENV)(set_color normal)
-   end
-   printf '↪ '
+   printf '> '
    set_color normal
 end
