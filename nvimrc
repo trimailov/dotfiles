@@ -166,6 +166,9 @@ set path+=**
 set errorformat=\ %#File\ \"%f\"\\,\ line\ %l\\,\ %m
 set errorformat+=\@File\:\ %f
 
+" the screen will not be redrawn while executing macros
+set lazyredraw
+
 " turn on syntax highlighting
 syntax on
 " ====================
