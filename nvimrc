@@ -213,6 +213,12 @@ nnoremap <leader>m :silent make!<cr>
 " deoplete tab-complete
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
+" base64 decode selection
+vnoremap <leader>64 c<c-r>=system('base64 --decode', @")<cr><esc>
+
+" base64 encode selection
+vnoremap <leader>64e c<c-r>=system('base64', @")<cr><esc>
+
 " ====================
 
 " NVIM specific
