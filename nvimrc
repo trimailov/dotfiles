@@ -78,7 +78,11 @@ Plugin 'ekalinin/Dockerfile.vim'
 
 Plugin 'jlanzarotta/bufexplorer'
 
+" typescript
+Plugin 'leafgarland/typescript-vim'
+
 Plugin 'vimwiki/vimwiki'
+
 " XXX: there's a bug with native shortcut https://github.com/vimwiki/vimwiki/issues/427
 " so remap it to something else
 nnoremap <leader>t :VimwikiToggleListItem<CR>
