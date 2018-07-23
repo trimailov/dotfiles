@@ -29,7 +29,6 @@ cnoreabbrev Rg Ack
 cnoreabbrev RG Ack
 " Better Python autoindentation
 Plugin 'hynek/vim-python-pep8-indent'
-" use solorized scheme
 
 " fzf plugin
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -59,20 +58,17 @@ let g:ale_linters = {
 \}
 let g:ale_echo_msg_format = '[%linter%] %s'
 
-" autocompletion
-" Plugin 'Valloric/YouCompleteMe'
-
 " asynchronous autocompletion for neovim/vim8
 if has('nvim')
   Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plugin 'zchee/deoplete-jedi'
-else
-  Plugin 'Shougo/deoplete.nvim'
-  Plugin 'zchee/deoplete-jedi'
-  Plugin 'roxma/nvim-yarp'
-  Plugin 'roxma/vim-hug-neovim-rpc'
+  let g:deoplete#enable_at_startup = 1
 endif
-let g:deoplete#enable_at_startup = 1
+" else
+"   Plugin 'Shougo/deoplete.nvim'
+"   Plugin 'zchee/deoplete-jedi'
+"   Plugin 'roxma/nvim-yarp'
+"   Plugin 'roxma/vim-hug-neovim-rpc'
 
 Plugin 'ekalinin/Dockerfile.vim'
 
@@ -96,7 +92,6 @@ filetype plugin indent on    " required
 " ==== Vundle settings end ====
 
 " ==== VIM settings ====
-
 " Set shell to bash in case bash incompatible shell is used
 set shell=/bin/bash
 
@@ -221,7 +216,7 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 vnoremap <leader>64 c<c-r>=system('base64 --decode', @")<cr><esc>
 
 " base64 encode selection
-vnoremap <leader>64e c<c-r>=system('base64', @")<cr><esc>
+vnoremap <leader>64e c<c-r>=system('base64', @")<esc>
 
 " ====================
 
@@ -240,6 +235,6 @@ if has('gui_running')
     set guifont=Menlo:h12
 
     " set color for macvim (https://stackoverflow.com/a/21114248)
-    let colors_name = 'Tomorrow-Night-Bright'
+    let colors_name = 'Tomorrow-Night'
     let macvim_skip_colorscheme=1
 endif
