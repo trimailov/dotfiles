@@ -45,4 +45,7 @@ function rm_wifi_preferences --description 'Remove OS X wifi preferences on wifi
     rm /Library/Preferences/SystemConfiguration/NetworkInterfaces.plist
     rm /Library/Preferences/SystemConfiguration/preferences.plist
 end
+
+# NIM lang
+set -x PATH $PATH /Users/justas/.nimble/bin
 set -g fish_user_paths "/usr/local/opt/openssl/bin" $fish_user_paths
