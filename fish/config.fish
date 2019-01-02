@@ -48,4 +48,6 @@ end
 
 # NIM lang
 set -x PATH $PATH /Users/justas/.nimble/bin
+
 set -g fish_user_paths "/usr/local/opt/openssl/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/sqlite/bin" $fish_user_paths
