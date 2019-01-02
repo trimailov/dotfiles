@@ -78,10 +78,24 @@ Plugin 'jlanzarotta/bufexplorer'
 Plugin 'leafgarland/typescript-vim'
 
 Plugin 'vimwiki/vimwiki'
+let g:vimwiki_url_maxsave = 0
+
+" auto comments
+Plugin 'tpope/vim-commentary'
 
 " XXX: there's a bug with native shortcut https://github.com/vimwiki/vimwiki/issues/427
 " so remap it to something else
 nnoremap <leader>t :VimwikiToggleListItem<CR>
+
+" nimlang support
+Plugin 'zah/nim.vim'
+
+" monokai colours
+Plugin 'patstockwell/vim-monokai-tasty'
+
+" JS plugins
+Plugin 'styled-components/vim-styled-components'
+Plugin 'elzr/vim-json'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -224,6 +238,7 @@ vnoremap <leader>64e c<c-r>=system('base64', @")<esc>
 if has('nvim')
     let g:python_host_prog = '/Users/justas/.pyenv/shims/python2'
     let g:python3_host_prog = '/Users/justas/.pyenv/shims/python3'
+
     colorscheme tomorrow-night-bright
     set termguicolors
 endif
