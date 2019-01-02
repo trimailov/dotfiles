@@ -252,4 +252,5 @@ if has('gui_running')
     " set color for macvim (https://stackoverflow.com/a/21114248)
     let colors_name = 'Tomorrow-Night'
     let macvim_skip_colorscheme=1
+    colorscheme Tomorrow-Night-Bright
 endif
