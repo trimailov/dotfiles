@@ -58,17 +58,12 @@ let g:ale_linters = {
 \}
 let g:ale_echo_msg_format = '[%linter%] %s'
 
-"" asynchronous autocompletion for neovim/vim8
-"if has('nvim')
-"  Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"  Plugin 'zchee/deoplete-jedi'
-"  let g:deoplete#enable_at_startup = 1
-"endif
-" else
-"   Plugin 'Shougo/deoplete.nvim'
-"   Plugin 'zchee/deoplete-jedi'
-"   Plugin 'roxma/nvim-yarp'
-"   Plugin 'roxma/vim-hug-neovim-rpc'
+" asynchronous autocompletion for neovim/vim8
+if has('nvim')
+  Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plugin 'zchee/deoplete-jedi'
+  let g:deoplete#enable_at_startup = 1
+endif
 
 Plugin 'ekalinin/Dockerfile.vim'
 
