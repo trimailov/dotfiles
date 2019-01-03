@@ -90,9 +90,6 @@ nnoremap <leader>t :VimwikiToggleListItem<CR>
 " nimlang support
 Plugin 'zah/nim.vim'
 
-" monokai colours
-Plugin 'patstockwell/vim-monokai-tasty'
-
 " JS plugins
 Plugin 'styled-components/vim-styled-components'
 Plugin 'elzr/vim-json'
