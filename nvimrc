@@ -1,101 +1,87 @@
-" ==== Vundle settings ====
+" ==== Plug settings ====
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call plug#begin('~/.local/share/nvim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
 " Git gutter
-Plugin 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 " Fugitive - git for vim
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 " NerdTree
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '__pycache__$', '\.DS_Store']
 let NERDTreeShowHidden=1
 
 " plugin for ag - the silver searcher
-Plugin 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 let g:ackprg = 'rg --vimgrep'
 cnoreabbrev rg Ack
 cnoreabbrev rG Ack
 cnoreabbrev Rg Ack
 cnoreabbrev RG Ack
 " Better Python autoindentation
-Plugin 'hynek/vim-python-pep8-indent'
+Plug 'hynek/vim-python-pep8-indent'
 
 " fzf plugin
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " html5 syntax highlighting
-Plugin 'othree/html5.vim'
+Plug 'othree/html5.vim'
 " surround plugin
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
 " javascript plugin
-Plugin 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript'
 " JSX syntax highlighting and indenting
-Plugin 'mxw/vim-jsx'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'othree/yajs'
+Plug 'mxw/vim-jsx'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'othree/yajs'
 " use JSX syntax highlighting on .js files as well
 let g:jsx_ext_required = 0
 
 " editorconfig plugin: http://editorconfig.org/
-Plugin 'editorconfig/editorconfig-vim'
+Plug 'editorconfig/editorconfig-vim'
 
 " Asynchronous Lint Engine
-Plugin 'w0rp/ale'
+Plug 'w0rp/ale'
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'python': ['flake8'],
 \}
 let g:ale_echo_msg_format = '[%linter%] %s'
 
-" " asynchronous autocompletion for neovim/vim8
-" if has('nvim')
-"   Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"   Plugin 'zchee/deoplete-jedi'
-"   let g:deoplete#enable_at_startup = 1
-" endif
+" autocompletion
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
-Plugin 'ekalinin/Dockerfile.vim'
+Plug 'ekalinin/Dockerfile.vim'
 
-Plugin 'jlanzarotta/bufexplorer'
+Plug 'jlanzarotta/bufexplorer'
 
 " typescript
-Plugin 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim'
 
-Plugin 'vimwiki/vimwiki'
+Plug 'vimwiki/vimwiki'
 let g:vimwiki_url_maxsave = 0
 
 " auto comments
-Plugin 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 
 " XXX: there's a bug with native shortcut https://github.com/vimwiki/vimwiki/issues/427
 " so remap it to something else
 nnoremap <leader>t :VimwikiToggleListItem<CR>
 
 " nimlang support
-Plugin 'zah/nim.vim'
+Plug 'zah/nim.vim'
 
 " JS plugins
-Plugin 'styled-components/vim-styled-components'
-Plugin 'elzr/vim-json'
+Plug 'styled-components/vim-styled-components'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
+call plug#end()            " required
 "
-" ==== Vundle settings end ====
+" ==== Plug settings end ====
 
 " ==== VIM settings ====
 " Set shell to bash in case bash incompatible shell is used
