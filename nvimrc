@@ -57,8 +57,6 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
 Plug 'ekalinin/Dockerfile.vim'
 
-Plug 'jlanzarotta/bufexplorer'
-
 " typescript
 Plug 'leafgarland/typescript-vim'
 
@@ -106,9 +104,6 @@ set softtabstop=4
 " Number of spaces for autoindent
 set shiftwidth=4
 
-" Enable autoindent
-" set smartindent
-
 " make backspace work like most other apps
 set backspace=2
 
@@ -147,9 +142,6 @@ set incsearch
 " highlight searches
 set hlsearch
 
-" highlight cureent line
-" set cursorline
-
 " do recursive file find
 set path+=**
 
@@ -162,13 +154,6 @@ set lazyredraw
 
 " turn on syntax highlighting
 syntax on
-" ====================
-
-" ==== COLORS ====
-" colorscheme solarized
-" set bg=light
-" let g:solarized_contrast = "high"
-
 " ====================
 
 " ==== KEY REMAPS ====
@@ -200,9 +185,6 @@ nnoremap <leader>r :NERDTreeFind<cr>
 
 " for tests
 nnoremap <leader>m :silent make!<cr>
-
-" deoplete tab-complete
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " base64 decode selection
 vnoremap <leader>64 c<c-r>=system('base64 --decode', @")<cr><esc>
