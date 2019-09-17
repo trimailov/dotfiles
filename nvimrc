@@ -25,7 +25,8 @@ cnoreabbrev RG Ack
 Plug 'hynek/vim-python-pep8-indent'
 
 " fzf plugin
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 " html5 syntax highlighting
 Plug 'othree/html5.vim'
@@ -74,7 +75,7 @@ nnoremap <leader>t :VimwikiToggleListItem<CR>
 Plug 'zah/nim.vim'
 
 " JS plugins
-Plug 'styled-components/vim-styled-components'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
