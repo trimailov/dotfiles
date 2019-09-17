@@ -186,6 +186,9 @@ nnoremap <leader>r :NERDTreeFind<cr>
 " for tests
 nnoremap <leader>m :silent make!<cr>
 
+" tab autocomplete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
 " base64 decode selection
 vnoremap <leader>64 c<c-r>=system('base64 --decode', @")<cr><esc>
 
