@@ -184,6 +184,14 @@ nnoremap <leader>n :NERDTreeToggle<cr>
 " map File reveal in tree to a shortcut
 nnoremap <leader>r :NERDTreeFind<cr>
 
+" move between windows
+nnoremap <m-h> <c-w>h
+nnoremap <m-j> <c-w>j
+nnoremap <m-k> <c-w>k
+nnoremap <m-l> <c-w>l
+nnoremap <m-p> <c-w>p
+nnoremap <m-w> <c-w>w
+
 " for tests
 nnoremap <leader>m :silent make!<cr>
 
@@ -195,6 +203,17 @@ vnoremap <leader>64 c<c-r>=system('base64 --decode', @")<cr><esc>
 
 " base64 encode selection
 vnoremap <leader>64e c<c-r>=system('base64', @")<esc>
+
+" escape terminal
+tnoremap <esc> <c-\><c-n>
+
+" move out of terminal window
+tnoremap <m-h> <c-\><c-n><c-w>h
+tnoremap <m-j> <c-\><c-n><c-w>j
+tnoremap <m-k> <c-\><c-n><c-w>k
+tnoremap <m-l> <c-\><c-n><c-w>l
+tnoremap <m-p> <c-\><c-n><c-w>p
+tnoremap <m-w> <c-\><c-n><c-w>w
 
 " ====================
 
