@@ -128,9 +128,6 @@ set colorcolumn=80
 set splitbelow
 set splitright
 
-" do not save swap files
-set noswapfile
-
 " copy to OS clipboard
 set clipboard=unnamed
 
