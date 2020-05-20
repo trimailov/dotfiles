@@ -1,4 +1,4 @@
 #!/usr/bin/bash
-ln -s ~/.config/fish/config.fish fish/config.fish
-ln -s ~/.config/fish/functions fish/functions
-ln -s ~/.config/nvim nvim
+ln -s ~/dotfiles/fish/config.fish ~/.config/fish/config.fish
+ln -s ~/dotfiles/fish/functions ~/.config/fish/functions
+ln -s ~/dotfiles/nvim ~/.config/nvim
