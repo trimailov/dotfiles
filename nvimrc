@@ -150,6 +150,9 @@ set errorformat+=\@File\:\ %f
 " the screen will not be redrawn while executing macros
 set lazyredraw
 
+" show invisible characters
+set list
+
 " turn on syntax highlighting
 syntax on
 " ====================
