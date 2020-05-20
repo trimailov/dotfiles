@@ -63,6 +63,8 @@ Plug 'leafgarland/typescript-vim'
 
 Plug 'vimwiki/vimwiki'
 let g:vimwiki_url_maxsave = 0
+" disable table tab completion as it's used for autocomplete
+let g:vimwiki_table_mappings=0
 
 " auto comments
 Plug 'tpope/vim-commentary'
