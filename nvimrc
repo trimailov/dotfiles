@@ -250,8 +250,14 @@ tnoremap <m-w> <c-\><c-n><c-w>w
 
 " NVIM specific
 if has('nvim')
-    let g:python_host_prog = '/home/justas/.pyenv/shims/python2'
-    let g:python3_host_prog = '/home/justas/.pyenv/shims/python3'
+    let os = substitute(system('uname'), "\n", "", "")
+    if os == "Darwin"
+        let g:python_host_prog = '/Users/justas/.pyenv/shims/python2'
+        let g:python3_host_prog = '/Users/justas/.pyenv/shims/python3'
+    elseif os == "Linux"
+        let g:python_host_prog = '/home/justas/.pyenv/shims/python2'
+        let g:python3_host_prog = '/home/justas/.pyenv/shims/python3'
+    endif
 
     colorscheme Tomorrow-Night-Bright
     set termguicolors
