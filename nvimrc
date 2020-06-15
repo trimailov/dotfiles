@@ -25,7 +25,8 @@ cnoreabbrev RG Ack
 Plug 'hynek/vim-python-pep8-indent'
 
 " fzf plugin
-Plug '/usr/local/opt/fzf'
+" Plug '/usr/local/opt/fzf'
+Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 
 " html5 syntax highlighting
@@ -54,7 +55,7 @@ let g:ale_linters = {
 let g:ale_echo_msg_format = '[%linter%] %code%: %s'
 
 " autocompletion
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'ekalinin/Dockerfile.vim'
 
@@ -123,8 +124,8 @@ endfun
 
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
-" Highlight 80th column
-set colorcolumn=80
+" Highlight 100th column
+set colorcolumn=100
 
 " when splitting window split below or to the right of original window
 set splitbelow
@@ -157,6 +158,34 @@ set list
 
 " turn on syntax highlighting
 syntax on
+
+" settings for coc.nvim
+
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
 " ====================
 
 " ==== KEY REMAPS ====
@@ -221,10 +250,10 @@ tnoremap <m-w> <c-\><c-n><c-w>w
 
 " NVIM specific
 if has('nvim')
-    let g:python_host_prog = '/Users/justas/.pyenv/shims/python2'
-    let g:python3_host_prog = '/Users/justas/.pyenv/shims/python3'
+    let g:python_host_prog = '/home/justas/.pyenv/shims/python2'
+    let g:python3_host_prog = '/home/justas/.pyenv/shims/python3'
 
-    colorscheme tomorrow-night-bright
+    colorscheme Tomorrow-Night-Bright
     set termguicolors
 endif
 

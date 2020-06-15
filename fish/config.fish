@@ -16,6 +16,7 @@ set -x PATH $PATH /usr/local/texlive/2015basic/bin/universal-darwin
 
 # pyenv's shims path
 set -x PATH ~/.pyenv/shims $PATH
+set -x PATH ~/.pyenv/bin $PATH
 set -x PYTHON_CONFIGURE_OPTS "--enable-framework"
 set -x PYENV_ROOT ~/.pyenv
 
@@ -51,3 +52,9 @@ set -x PATH $PATH /Users/justas/.nimble/bin
 
 set -g fish_user_paths "/usr/local/opt/openssl/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/sqlite/bin" $fish_user_paths
+
+# fzf
+set -x PATH ~/.fzf/bin $PATH
+
+# python
+set -x PATH ~/.local/bin $PATH

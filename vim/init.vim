@@ -1,1 +1,1 @@
-/Users/justas/dotfiles/nvimrc
+/home/justas/dotfiles/nvimrc
