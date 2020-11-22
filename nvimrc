@@ -46,14 +46,6 @@ let g:jsx_ext_required = 0
 " editorconfig plugin: http://editorconfig.org/
 Plug 'editorconfig/editorconfig-vim'
 
-" Asynchronous Lint Engine
-Plug 'w0rp/ale'
-let g:ale_linters = {
-\   'javascript': ['eslint'],
-\   'python': ['flake8'],
-\}
-let g:ale_echo_msg_format = '[%linter%] %code%: %s'
-
 " autocompletion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -67,9 +59,6 @@ let g:vimwiki_url_maxsave = 0
 " disable table tab completion as it's used for autocomplete
 let g:vimwiki_table_mappings=0
 
-" auto comments
-Plug 'tpope/vim-commentary'
-
 " XXX: there's a bug with native shortcut https://github.com/vimwiki/vimwiki/issues/427
 " so remap it to something else
 nnoremap <leader>t :VimwikiToggleListItem<CR>
@@ -77,8 +66,14 @@ nnoremap <leader>t :VimwikiToggleListItem<CR>
 " nimlang support
 Plug 'zah/nim.vim'
 
+" Jump to tag
+nn <M-g> :call JumpToDef()<cr>
+ino <M-g> <esc>:call JumpToDef()<cr>i
+
 " JS plugins
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+
+Plug 'chriskempson/base16-vim'
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
@@ -92,9 +87,37 @@ set shell=/bin/bash
 " Show line numbers
 set number
 
-" Show status line
+" Give more space for displaying messages. (from coc.nvim)
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience. (from coc.nvim)
+set updatetime=300
+
+" Don't pass messages to |ins-completion-menu|. (from coc.nvim)
+set shortmess+=c
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved. (from coc.nvim)
+set signcolumn=yes
+
+" " Show status line
 set laststatus=2
-set statusline=%f%<\ %r%h%w\ %{fugitive#statusline()}\ %=[%3l,%3v\ %L]
+
+function! StatusDiagnostic() abort
+  let info = get(b:, 'coc_diagnostic_info', {})
+  if empty(info) | return '' | endif
+  let msgs = []
+  if get(info, 'error', 0)
+    call add(msgs, 'E' . info['error'])
+  endif
+  if get(info, 'warning', 0)
+    call add(msgs, 'W' . info['warning'])
+  endif
+  return join(msgs, ' ') . ' ' . get(g:, 'coc_status', '')
+endfunction
+
+set statusline=%f%<\ %r%h%w\ %{fugitive#statusline()}\ %{StatusDiagnostic()}\ %{coc#status()}\ %=[%3l,%3v\ %L]
 
 " Insert spaces on tab
 set expandtab
@@ -175,6 +198,25 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+" " GoTo code navigation.
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+augroup mygroup
+  autocmd!
+  " Setup formatexpr specified filetype(s).
+  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  " Update signature help on jump placeholder.
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
@@ -226,9 +268,6 @@ nnoremap <m-w> <c-w>w
 " for tests
 nnoremap <leader>m :silent make!<cr>
 
-" tab autocomplete
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
 " base64 decode selection
 vnoremap <leader>64 c<c-r>=system('base64 --decode', @")<cr><esc>
 
@@ -260,6 +299,7 @@ if has('nvim')
     endif
 
     colorscheme Tomorrow-Night-Bright
+    " termguicolors do not work in terminal.app
     set termguicolors
 endif
 
