@@ -8,11 +8,12 @@ set -gx  LC_CTYPE en_US.UTF-8
 # set default editor
 set -x EDITOR nvim
 
+# gnu coreutils without `g` prefix
+set -x PATH /usr/local/opt/gnu-sed/libexec/gnubin $PATH
+set -x PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
+
 # homebrew sbin
 set -x PATH $PATH /usr/local/sbin
-
-# basictex bin
-set -x PATH $PATH /usr/local/texlive/2015basic/bin/universal-darwin
 
 # pyenv's shims path
 set -x PATH ~/.pyenv/shims $PATH
@@ -26,14 +27,8 @@ status --is-interactive; and source (pyenv init -|psub)
 # Rust's Cargo bin
 set -x PATH $PATH ~/.cargo/bin
 
-# GOPATH
-set -x GOPATH ~/Documents/programming/Go
-set -x PATH $PATH $GOPATH/bin
-
-# # ANDROID
-# set -x ANDROID_HOME ~/Library/Android/sdk
-# set -x PATH $PATH $ANDROID_HOME/tools
-# set -x PATH $PATH $ANDROID_HOME/platform-tools
+# Go's bin
+set -x PATH $PATH ~/go/bin
 
 # remove welcome message
 set fish_greeting
@@ -58,3 +53,8 @@ set -x PATH ~/.fzf/bin $PATH
 
 # python
 set -x PATH ~/.local/bin $PATH
+
+# MySQL
+alias mysql /usr/local/mysql/bin/mysql
+alias mysqladmin /usr/local/mysql/bin/mysqladmin
+set -g fish_user_paths "/usr/local/opt/tcl-tk/bin" $fish_user_paths
