@@ -19,10 +19,14 @@ set -x PATH $PATH /usr/local/sbin
 set -x PATH ~/.pyenv/shims $PATH
 set -x PATH ~/.pyenv/bin $PATH
 set -x PYTHON_CONFIGURE_OPTS "--enable-framework"
-set -x PYENV_ROOT ~/.pyenv
+set -Ux PYENV_ROOT ~/.pyenv
+set -Ux fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 
 # load pyenv automaticaly
-status --is-interactive; and source (pyenv init -|psub)
+# status --is-interactive; and source (pyenv init -|psub)
+if command -v pyenv 1>/dev/null 2>&1
+    pyenv init - | source
+end
 
 # Rust's Cargo bin
 set -x PATH $PATH ~/.cargo/bin
@@ -58,3 +62,4 @@ set -x PATH ~/.local/bin $PATH
 alias mysql /usr/local/mysql/bin/mysql
 alias mysqladmin /usr/local/mysql/bin/mysqladmin
 set -g fish_user_paths "/usr/local/opt/tcl-tk/bin" $fish_user_paths
+. /Users/justas/z.fish

@@ -21,12 +21,12 @@ cnoreabbrev rg Ack
 cnoreabbrev rG Ack
 cnoreabbrev Rg Ack
 cnoreabbrev RG Ack
+
 " Better Python autoindentation
 Plug 'hynek/vim-python-pep8-indent'
 
 " fzf plugin
-" Plug '/usr/local/opt/fzf'
-Plug '~/.fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " html5 syntax highlighting
