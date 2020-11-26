@@ -1,7 +1,9 @@
 # Setting up fresh macOS envrionment
 
 - Install [brew](https://brew.sh/);
-- Install [iterm](https://iterm2.com/downloads.html);
+- Install [iterm](https://iterm2.com/downloads.html):
+    - Setup alt-backspace behaviour to delete word: [https://unix.stackexchange.com/a/224335](https://unix.stackexchange.com/a/224335);
+    - In Preferences > Profiles > Keys. Create a Key combination "⌥ ← Delete" and have it Send Hex Codes: 0x1B 0x08;
 - Install [macpass](https://macpassapp.org/);
 - Connect [google drive](https://www.google.com/drive/download/) for keypass db;
 - Install fish shell: `brew install fish`:
