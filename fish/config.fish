@@ -63,3 +63,6 @@ alias mysql /usr/local/mysql/bin/mysql
 alias mysqladmin /usr/local/mysql/bin/mysqladmin
 set -g fish_user_paths "/usr/local/opt/tcl-tk/bin" $fish_user_paths
 . /Users/justas/z.fish
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
