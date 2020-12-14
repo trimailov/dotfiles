@@ -28,6 +28,7 @@ Plug 'hynek/vim-python-pep8-indent'
 " fzf plugin
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+let g:fzf_layout = { 'down': '40%' }
 
 " html5 syntax highlighting
 Plug 'othree/html5.vim'
@@ -176,8 +177,15 @@ set errorformat+=\@File\:\ %f
 " the screen will not be redrawn while executing macros
 set lazyredraw
 
-" show invisible characters
-set list
+" case insensitive search
+set ignorecase
+
+" no swapfile
+set noswapfile
+
+" " show invisible characters
+" set list
+" set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 
 " turn on syntax highlighting
 syntax on
@@ -307,10 +315,10 @@ endif
 if has('gui_running')
     set guioptions-=L
     set guioptions-=r
-    set guifont=Menlo:h12
+    set guifont=Menlo:h13
 
     " set color for macvim (https://stackoverflow.com/a/21114248)
-    let colors_name = 'Tomorrow-Night'
+    let colors_name = 'Tomorrow-Night-Bright'
     let macvim_skip_colorscheme=1
     colorscheme Tomorrow-Night-Bright
 endif
