@@ -26,3 +26,5 @@
 - Install [z](https://github.com/rupa/z/):
     - `curl https://raw.githubusercontent.com/sjl/z-fish/master/z.fish -o ~/z.fish`
     - `echo . ~/z.fish >> ~/.config/fish/config.fish`
+- Instal coc extensions in nvim:
+    - `:CocInstall coc-python coc-git coc-tsserver`
