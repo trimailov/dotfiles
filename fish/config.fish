@@ -9,20 +9,16 @@ set -gx  LC_CTYPE en_US.UTF-8
 set -x EDITOR nvim
 
 # gnu coreutils without `g` prefix
-set -x PATH /usr/local/opt/gnu-sed/libexec/gnubin $PATH
-set -x PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
+fish_add_path /usr/local/opt/gnu-sed/libexec/gnubin
+fish_add_path /usr/local/opt/coreutils/libexec/gnubin
 
 # homebrew sbin
-set -x PATH $PATH /usr/local/sbin
+fish_add_path /use/local/sbin
 
 # pyenv's shims path
-set -x PATH ~/.pyenv/shims $PATH
-set -x PATH ~/.pyenv/bin $PATH
+fish_add_path ~/.pyenv/bin
 set -x PYTHON_CONFIGURE_OPTS "--enable-framework"
 set -Ux PYENV_ROOT ~/.pyenv
-# https://fishshell.com/docs/current/tutorial.html#path
-# Note: you should NOT add this line to config.fish. If you do, the variable will get longer each time you run fish!
-# set -Ux fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 
 # d pyenv automaticaly
 # status --is-interactive; and source (pyenv init -|psub)
@@ -31,10 +27,10 @@ if command -v pyenv 1>/dev/null 2>&1
 end
 
 # Rust's Cargo bin
-set -x PATH $PATH ~/.cargo/bin
+fish_add_path ~/.cargo/bin
 
 # Go's bin
-set -x PATH $PATH ~/go/bin
+fish_add_path ~/go/bin
 
 # remove welcome message
 set fish_greeting
@@ -49,24 +45,21 @@ function rm_wifi_preferences --description 'Remove OS X wifi preferences on wifi
 end
 
 # NIM lang
-set -x PATH $PATH /Users/justas/.nimble/bin
+fish_add_path ~/.nimble/bin
 
-# set -g fish_user_paths "/usr/local/opt/openssl/bin" $fish_user_paths
-# set -g fish_user_paths "/usr/local/opt/sqlite/bin" $fish_user_paths
-set -x PATH "/usr/local/opt/openssl/bin" $PATH
-set -x PATH "/usr/local/opt/sqlite/bin" $PATH
+fish_add_path "/usr/local/opt/openssl/bin"
+fish_add_path "/usr/local/opt/sqlite/bin"
 
 # fzf
-set -x PATH ~/.fzf/bin $PATH
+fish_add_path ~/.fzf/bin
 
 # python
-set -x PATH ~/.local/bin $PATH
+fish_add_path ~/.local/bin
 
 # MySQL
 alias mysql /usr/local/mysql/bin/mysql
 alias mysqladmin /usr/local/mysql/bin/mysqladmin
-# set -g fish_user_paths "/usr/local/opt/tcl-tk/bin" $fish_user_paths
-set -x PATH "/usr/local/opt/tcl-tk/bin" $PATH
+fish_add_path "/usr/local/opt/tcl-tk/bin"
 . /Users/justas/z.fish
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
