@@ -9,6 +9,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 " Fugitive - git for vim
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'shumphrey/fugitive-gitlab.vim'
 " NerdTree
 Plug 'scrooloose/nerdtree'
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '__pycache__$', '\.DS_Store']
@@ -75,6 +77,11 @@ ino <M-g> <esc>:call JumpToDef()<cr>i
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 Plug 'chriskempson/base16-vim'
+
+Plug 'elixir-editors/vim-elixir'
+
+Plug 'fisadev/vim-isort'
+let g:vim_isort_config_overrides = { 'include_trailing_comma': 1, 'multi_line_output': 3}
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
@@ -178,7 +185,7 @@ set errorformat+=\@File\:\ %f
 set lazyredraw
 
 " case insensitive search
-set ignorecase
+" set ignorecase
 
 " no swapfile
 set noswapfile
