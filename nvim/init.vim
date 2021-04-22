@@ -247,13 +247,13 @@ endfunction
 
 " ==== KEY REMAPS ====
 " alias some fugitive.vim commands
-cnoreabbrev gc Gcommit -v
-cnoreabbrev gca Gcommit -v -a
+cnoreabbrev gc Git commit -v
+cnoreabbrev gca Git commit -v -a
 cnoreabbrev gd Gdiff
 cnoreabbrev gst Gstatus
 cnoreabbrev gw Gwrite
 cnoreabbrev gr Gread
-cnoreabbrev gb Gblame
+cnoreabbrev gb Git blame
 
 " use `contextual` arrow keys
 " i.e. always go up and down by visible line, and not by new-line breaks
