@@ -24,7 +24,12 @@
 	- `brew cask install qlmarkdown`;
 - Install [pyenv](https://github.com/pyenv/pyenv): `brew install pyenv`
 - Install [z](https://github.com/rupa/z/):
-    - `curl https://raw.githubusercontent.com/sjl/z-fish/master/z.fish -o ~/z.fish`
-    - `echo . ~/z.fish >> ~/.config/fish/config.fish`
+    - `fisher install z`
 - Instal coc extensions in nvim:
     - `:CocInstall coc-python coc-git coc-tsserver`
+
+Faster keyboard repeats:
+```
+defaults write -g InitialKeyRepeat -int 10
+defaults write -g KeyRepeat -int 1
+```
