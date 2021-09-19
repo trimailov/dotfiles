@@ -1,6 +1,3 @@
-# use aliases
-. ~/.config/fish/functions/aliases.fish
-
 # set locale to en_US.UTF-8
 set -gx  LC_ALL en_US.UTF-8
 set -gx  LC_CTYPE en_US.UTF-8
@@ -47,7 +44,7 @@ end
 # NIM lang
 fish_add_path ~/.nimble/bin
 
-fish_add_path "/usr/local/opt/openssl/bin"
+fish_add_path "/usr/local/opt/openssl@1.1/bin"
 fish_add_path "/usr/local/opt/sqlite/bin"
 
 # fzf
@@ -60,7 +57,7 @@ fish_add_path ~/.local/bin
 alias mysql /usr/local/mysql/bin/mysql
 alias mysqladmin /usr/local/mysql/bin/mysqladmin
 fish_add_path "/usr/local/opt/tcl-tk/bin"
-. /Users/justas/z.fish
+
+# . /Users/justas/z.fish
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
-

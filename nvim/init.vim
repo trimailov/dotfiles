@@ -80,9 +80,6 @@ Plug 'chriskempson/base16-vim'
 
 Plug 'elixir-editors/vim-elixir'
 
-Plug 'fisadev/vim-isort'
-let g:vim_isort_config_overrides = { 'include_trailing_comma': 1, 'multi_line_output': 3}
-
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 "
