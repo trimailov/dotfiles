@@ -75,6 +75,8 @@ Plug 'elixir-editors/vim-elixir'
 
 Plug 'neovim/nvim-lspconfig'
 
+Plug 'github/copilot.vim'
+
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 "
@@ -318,6 +320,11 @@ local nvim_lsp = require('lspconfig')
 -- Automatically start coq
 vim.g.coq_settings = { auto_start = 'shut-up' }
 local coq = require('coq')
+
+require("coq_3p") {
+  { src = "nvimlua", short_name = "nLUA" },
+  { src = "copilot", short_name = "COP", accept_key = "<c-f>" },
+}
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
