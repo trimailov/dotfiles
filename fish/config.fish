@@ -53,6 +53,10 @@ fish_add_path ~/.fzf/bin
 # python
 fish_add_path ~/.local/bin
 
+# scala/java/coursier
+fish_add_path ~/Library/Application\ Support/Coursier/bin
+set -x JAVA_HOME "/Users/justas/Library/Caches/Coursier/arc/https/github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u292-b10/OpenJDK8U-jdk_x64_mac_hotspot_8u292b10.tar.gz/jdk8u292-b10/Contents/Home"
+
 # MySQL
 alias mysql /usr/local/mysql/bin/mysql
 alias mysqladmin /usr/local/mysql/bin/mysqladmin
@@ -61,3 +65,4 @@ fish_add_path "/usr/local/opt/tcl-tk/bin"
 # . /Users/justas/z.fish
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
