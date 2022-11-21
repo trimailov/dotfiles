@@ -75,7 +75,7 @@ Plug 'elixir-editors/vim-elixir'
 
 Plug 'neovim/nvim-lspconfig'
 
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
@@ -295,9 +295,11 @@ if has('nvim')
         let g:python3_host_prog = '/home/justas/.pyenv/shims/python3'
     endif
 
-    colorscheme Tomorrow-Night-Bright
     " termguicolors do not work in terminal.app
     set termguicolors
+
+    " colorscheme Tomorrow-Night-Bright
+    colorscheme selenized
 endif
 
 " MACVIM specific
@@ -307,9 +309,10 @@ if has('gui_running')
     set guifont=Menlo:h13
 
     " set color for macvim (https://stackoverflow.com/a/21114248)
-    let colors_name = 'Tomorrow-Night-Bright'
+    let colors_name = 'selenized'
     let macvim_skip_colorscheme=1
-    colorscheme Tomorrow-Night-Bright
+    set bg=dark
+    colorscheme selenized
 endif
 
 lua << EOF
@@ -323,7 +326,7 @@ local coq = require('coq')
 
 require("coq_3p") {
   { src = "nvimlua", short_name = "nLUA" },
-  { src = "copilot", short_name = "COP", accept_key = "<c-f>" },
+  -- { src = "copilot", short_name = "COP", accept_key = "<c-f>" },
 }
 
 -- Use an on_attach function to only map the following keys
