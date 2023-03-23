@@ -50,6 +50,9 @@ let g:jsx_ext_required = 0
 Plug 'editorconfig/editorconfig-vim'
 
 " autocompletion
+"
+" because lsp supports only manual completion, autocompletion comes from other
+" packages: https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
@@ -298,8 +301,8 @@ if has('nvim')
     " termguicolors do not work in terminal.app
     set termguicolors
 
-    " colorscheme Tomorrow-Night-Bright
-    colorscheme selenized
+    colorscheme Tomorrow-Night-Bright
+    " colorscheme panic
 endif
 
 " MACVIM specific
@@ -362,15 +365,22 @@ local on_attach = function(client, bufnr)
 
 end
 
+-- Inspired from: https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion#coq_nvim
+-- Servers: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+--
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pyright', 'tsserver' }
+local servers = { 'pyright', 'tsserver', 'sourcekit', 'vimls' }
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
-    on_attach = on_attach,
-    flags = {
-      debounce_text_changes = 150,
-    }
-  }
+  nvim_lsp[lsp].setup(
+      require('coq').lsp_ensure_capabilities(
+          {
+            on_attach = on_attach,
+            flags = {
+              debounce_text_changes = 150,
+            }
+          }
+      )
+  )
 end
 EOF
