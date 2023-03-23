@@ -9,6 +9,9 @@ set -x EDITOR nvim
 fish_add_path /usr/local/opt/gnu-sed/libexec/gnubin
 fish_add_path /usr/local/opt/coreutils/libexec/gnubin
 
+# gnu make without `g` prefix
+fish_add_path /usr/local/opt/make/libexec/gnubin
+
 # homebrew sbin
 fish_add_path /use/local/sbin
 
