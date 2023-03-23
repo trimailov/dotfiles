@@ -78,7 +78,7 @@ Plug 'elixir-editors/vim-elixir'
 
 Plug 'neovim/nvim-lspconfig'
 
-" Plug 'github/copilot.vim'
+Plug 'github/copilot.vim'
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
@@ -174,58 +174,8 @@ set lazyredraw
 " no swapfile
 set noswapfile
 
-" " show invisible characters
-" set list
-" set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
-
 " turn on syntax highlighting
 syntax on
-
-" " settings for coc.nvim
-"
-" " Use tab for trigger completion with characters ahead and navigate.
-" " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" " other plugin before putting this into your config.
-" inoremap <silent><expr> <TAB>
-"       \ pumvisible() ? "\<C-n>" :
-"       \ <SID>check_back_space() ? "\<TAB>" :
-"       \ coc#refresh()
-" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-"
-" function! s:check_back_space() abort
-"   let col = col('.') - 1
-"   return !col || getline('.')[col - 1]  =~# '\s'
-" endfunction
-"
-" " Use <c-space> to trigger completion.
-" if has('nvim')
-"   inoremap <silent><expr> <c-space> coc#refresh()
-" else
-"   inoremap <silent><expr> <c-@> coc#refresh()
-" endif
-"
-" " " GoTo code navigation.
-" " Highlight the symbol and its references when holding the cursor.
-" autocmd CursorHold * silent call CocActionAsync('highlight')
-"
-" augroup mygroup
-"   autocmd!
-"   " Setup formatexpr specified filetype(s).
-"   autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-"   " Update signature help on jump placeholder.
-"   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-" augroup end
-"
-" " Use K to show documentation in preview window.
-" nnoremap <silent> K :call <SID>show_documentation()<CR>
-"
-" function! s:show_documentation()
-"   if (index(['vim','help'], &filetype) >= 0)
-"     execute 'h '.expand('<cword>')
-"   else
-"     call CocAction('doHover')
-"   endif
-" endfunction
 
 " ====================
 
@@ -329,7 +279,7 @@ local coq = require('coq')
 
 require("coq_3p") {
   { src = "nvimlua", short_name = "nLUA" },
-  -- { src = "copilot", short_name = "COP", accept_key = "<c-f>" },
+  { src = "copilot", short_name = "COP", accept_key = "<C-r>" },
 }
 
 -- Use an on_attach function to only map the following keys
